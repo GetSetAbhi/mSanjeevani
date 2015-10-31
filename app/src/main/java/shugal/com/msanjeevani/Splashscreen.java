@@ -71,7 +71,7 @@ public class Splashscreen extends AppCompatActivity {
         DoctorData datas0 = new DoctorData("Dr Aman", "Fortis");
         db.addDoctor(datas0);
         DoctorData datas1 = new DoctorData("Dr Agarwal", "Fortis");
-        db.addDoctor(datas0);
+        db.addDoctor(datas1);
         DoctorData datas2 = new DoctorData("Dr Kumar", "Max Hospital");
         db.addDoctor(datas2);
         DoctorData datas3 = new DoctorData("Dr Agarwal", "Max Hospital");
