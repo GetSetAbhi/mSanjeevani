@@ -24,6 +24,7 @@ import android.widget.EditText;
 import android.widget.RadioButton;
 import android.widget.Spinner;
 import android.widget.TimePicker;
+import android.widget.Toast;
 
 import java.util.Calendar;
 
@@ -146,7 +147,8 @@ public class sample_activity extends AppCompatActivity {
         DatabaseHelper db = new DatabaseHelper(this);
         db.addSample(data);
         db.close();
-        startActivity(new Intent(this, sample_list.class));
+        startActivity(new Intent(this, MainActivity.class));
+        Toast.makeText(getApplicationContext(), "Request Sent!!", Toast.LENGTH_SHORT).show();
         finish();
         //data.setLecture_number(Integer.parseInt(lectureNumber.getText().toString()));
         //db.addTimetableSlot(data);
@@ -159,7 +161,7 @@ public class sample_activity extends AppCompatActivity {
             return new DatePickerDialog(this,
                     dPickerListener,
                     calender.get(Calendar.YEAR),
-                    calender.get(Calendar.MONTH)+1,
+                    calender.get(Calendar.MONTH),
                     calender.get(Calendar.DAY_OF_MONTH));
 
         } else if (id == TIME_DIALOG) {

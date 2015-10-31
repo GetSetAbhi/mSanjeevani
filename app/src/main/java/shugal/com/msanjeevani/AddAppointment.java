@@ -15,6 +15,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.text.Editable;
 import android.text.TextWatcher;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.view.WindowManager;
 import android.widget.AdapterView;
@@ -158,8 +159,6 @@ public class AddAppointment extends AppCompatActivity {
         } else if (female.isChecked()) {
             data.setGender("Female");
         }
-        DatabaseHelper db = new DatabaseHelper(this);
-        db.addAppointment(data);
         //data.setLecture_number(Integer.parseInt(lectureNumber.getText().toString()));
         //db.addTimetableSlot(data);
         //db.close();
@@ -222,16 +221,27 @@ public class AddAppointment extends AppCompatActivity {
 
     private void launchStatusDialog() {
         final Context context = this;
+        LayoutInflater inflater = LayoutInflater.from(context);
+
+
+        View dialogView = inflater.inflate(R.layout.address, null);
 
         final AlertDialog.Builder customEventDialog = new AlertDialog.Builder(context);
 
-        customEventDialog.setTitle("Details saved, please Check status");
-        customEventDialog.setCancelable(true);
+        final EditText purposeText = (EditText) dialogView.findViewById(R.id.purpose);
+        final EditText amountText = (EditText) dialogView.findViewById(R.id.amount);
 
+
+        customEventDialog.setView(dialogView);
+        customEventDialog.setTitle("Add Address and Number");
+        customEventDialog.setCancelable(true);
         customEventDialog.setPositiveButton("Ok", new DialogInterface.OnClickListener() {
             @Override
             public void onClick(DialogInterface dialog, int which) {
-                //startActivity(new Intent(getApplicationContext(), ));
+                Toast.makeText(getApplicationContext(), "Details Added", Toast.LENGTH_SHORT).show();
+                DatabaseHelper db = new DatabaseHelper(getApplicationContext());
+                db.addAppointment(data);
+                db.close();
                 startActivity(new Intent(getApplicationContext(), AppointmentList.class));
                 finish();
             }

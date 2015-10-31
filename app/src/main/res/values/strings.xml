@@ -45,5 +45,6 @@
     require care, try to cover it (e.g. with plastic wrap or cover or any ideal covering which does not
     stick to the burn). This will prevent infection by keeping the area clean.</string>
     <string name="title_activity_info">InfoActivity</string>
+    <string name="title_activity_address">AddressActivity</string>
 
 </resources>

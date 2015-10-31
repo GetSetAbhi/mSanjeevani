@@ -3,8 +3,8 @@
     package="shugal.com.msanjeevani" >
 
     <uses-permission android:name="android.permission.CALL_PHONE" />
-    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
-    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.INTERNET" />
 
     <application
         android:allowBackup="true"
@@ -47,7 +47,7 @@
         <activity
             android:name=".FirstAidTips"
             android:label="@string/title_activity_first_aid_tips"
-            android:parentActivityName=".MainActivity"
+            android:parentActivityName=".FirstaidActivity"
             android:theme="@style/AppTheme.NoActionBar" >
         </activity>
         <activity
@@ -90,37 +90,38 @@
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" >
         </activity>
-
         <activity
             android:name=".emailMedicine"
             android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".GeneralInstructions"
             android:label="@string/title_activity_general_instructions"
+            android:parentActivityName=".FirstaidActivity"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".AidBoxItems"
             android:label="@string/title_activity_aid_box_items"
+            android:parentActivityName=".FirstaidActivity"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".OneClickHelp"
             android:label="@string/title_activity_one_click_help"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" >
         </activity>
         <activity
-            android:parentActivityName=".MainActivity"
             android:name=".InfoActivity"
             android:label="@string/title_activity_info"
+            android:parentActivityName=".MainActivity"
             android:theme="@style/AppTheme" >
         </activity>
-
+        <activity
+            android:name=".Greetings"
+            android:theme="@style/Splashscreen_theme" />
     </application>
 
 </manifest>

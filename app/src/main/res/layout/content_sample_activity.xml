@@ -188,7 +188,7 @@
     <Button
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Book Appointment"
+        android:text="Collect Sample"
         android:id="@+id/addButton"
         android:onClick="addSample"
         android:layout_gravity="center_horizontal"
