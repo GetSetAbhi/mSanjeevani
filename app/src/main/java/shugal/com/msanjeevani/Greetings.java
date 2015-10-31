@@ -20,8 +20,6 @@ public class Greetings extends AppIntro2 {
 
         addSlide(SampleSlide.newInstance(R.layout.intro4));
 
-        addSlide(SampleSlide.newInstance(R.layout.intro5));
-
         showDoneButton(true);
 
     }

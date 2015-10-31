@@ -28,7 +28,7 @@
         android:gravity="center"
         android:paddingLeft="64dp"
         android:paddingRight="64dp"
-        android:text="Add subjects by clicking on the floating button"
+        android:text="Appointment Notifications"
         android:textColor="#ffffff"
         android:textSize="16sp" />
 
@@ -45,7 +45,9 @@
             android:layout_gravity="center"
             android:paddingLeft="16dp"
             android:paddingRight="16dp"
-             />
+            android:src="@drawable/intro4"
+
+            />
     </LinearLayout>
 
     <TextView

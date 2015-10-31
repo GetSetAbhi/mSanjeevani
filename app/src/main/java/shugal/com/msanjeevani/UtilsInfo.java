@@ -10,10 +10,10 @@ public class UtilsInfo {
     public static final List<Friend> friends = new ArrayList<>();
 
     static {
-        friends.add(new Friend(R.drawable.fortis_cover, "mSanjeevani", R.color.sienna, "WE CARE", "Stay Healthy"));
+        friends.add(new Friend(R.drawable.info1256, "mSanjeevani", R.color.sienna, "V CARE", "Stay Healthy"));
 
-        friends.add(new Friend(R.drawable.maxhospital, "SHUGAL@INC", R.color.saffron,
-                "ABHISHEK DEEPINDER AAYUSH", ""));
+        friends.add(new Friend(R.drawable.info2256, "SHUGAL@INC", R.color.saffron,
+                "ABHISHEK               DEEPINDER                       AAYUSH", ""));
 
     }
 }

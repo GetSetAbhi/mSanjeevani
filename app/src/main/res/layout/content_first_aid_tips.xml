@@ -61,6 +61,7 @@
             android:layout_height="wrap_content"
             android:textStyle="bold|italic"
             android:textSize="20sp"
+            android:paddingBottom="15dp"
             android:text="@string/generalTips3"
             android:layout_alignParentTop="true"/>
 
